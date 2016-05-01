@@ -27,6 +27,7 @@ BuildRequires: cmake(KF5WebKit)
 BuildRequires: cmake(KF5KDELibs4Support)
 BuildRequires: cmake(Qt5UiPlugin)
 BuildRequires: cmake(KF5Libkleo)
+BuildRequires: cmake(KF5CalendarCore)
 BuildRequires: boost-devel
 
 %description
