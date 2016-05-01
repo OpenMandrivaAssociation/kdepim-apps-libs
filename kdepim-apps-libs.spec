@@ -20,6 +20,7 @@ BuildRequires: cmake(Qt5Test)
 BuildRequires: cmake(Qt5Qml)
 BuildRequires: sasl-devel
 BuildRequires: cmake(KF5AkonadiSearch)
+BuildRequires: cmake(KF5AkonadiContact)
 BuildRequires: cmake(KF5Mime)
 BuildRequires: cmake(KF5GrantleeTheme)
 BuildRequires: cmake(KF5WebKit)
