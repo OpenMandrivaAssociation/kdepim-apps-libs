@@ -24,6 +24,7 @@ BuildRequires: cmake(KF5Mime)
 BuildRequires: cmake(KF5GrantleeTheme)
 BuildRequires: cmake(KF5WebKit)
 BuildRequires: cmake(KF5KDELibs4Support)
+BuildRequires: boost-devel
 
 %description
 Libraries used by KDE PIM applications
