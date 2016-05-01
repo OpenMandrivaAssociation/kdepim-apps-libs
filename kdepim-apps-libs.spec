@@ -21,6 +21,8 @@ BuildRequires: cmake(Qt5Qml)
 BuildRequires: sasl-devel
 BuildRequires: cmake(KF5AkonadiSearch)
 BuildRequires: cmake(KF5Mime)
+BuildRequires: cmake(KF5GrantleeTheme)
+BuildRequires: cmake(KF5WebKit)
 
 %description
 Libraries used by KDE PIM applications
