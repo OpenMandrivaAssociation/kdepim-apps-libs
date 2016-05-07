@@ -8,7 +8,7 @@ Version:	16.04.0
 %else
 %define ftpdir stable
 %endif
-Release:	1
+Release:	2
 Source0: http://download.kde.org/%{ftpdir}/applications/%{version}/src/%{name}-%{version}.tar.xz
 Summary: Libraries used by KDE PIM applications
 URL: http://kde.org/
@@ -58,10 +58,9 @@ Development files (Headers etc.) for %{name}.
 %prep
 %setup -q
 %apply_patches
+%cmake_kde5
 
 %build
-%cmake_kde5
-cd ../
 %ninja -C build
 
 %install
