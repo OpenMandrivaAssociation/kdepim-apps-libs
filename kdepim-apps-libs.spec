@@ -32,10 +32,9 @@ BuildRequires: cmake(KF5PimCommon)
 BuildRequires: boost-devel
 
 %description
-Libraries used by KDE PIM applications
+Libraries used by KDE PIM applications.
 
 %define major 5
-%libpackage KF5ComposerEditorNG %{major}
 %libpackage KF5FollowupReminder %{major}
 %libpackage KF5KaddressbookGrantlee %{major}
 %libpackage KF5KdepimDBusInterfaces %{major}
@@ -46,7 +45,6 @@ Libraries used by KDE PIM applications
 %package -n %{devname}
 Summary: Development files for %{name}
 Group: Development/C
-Requires: %{mklibname KF5ComposerEditorNG %{major}} = %{EVRD}
 Requires: %{mklibname KF5FollowupReminder %{major}} = %{EVRD}
 Requires: %{mklibname KF5KaddressbookGrantlee %{major}} = %{EVRD}
 Requires: %{mklibname KF5KdepimDBusInterfaces %{major}} = %{EVRD}
@@ -68,7 +66,6 @@ Development files (Headers etc.) for %{name}.
 
 %files
 %{_sysconfdir}/xdg/kdepim-apps-lib.categories
-%{_datadir}/composereditor
 
 %files -n %{devname}
 %{_includedir}/*
