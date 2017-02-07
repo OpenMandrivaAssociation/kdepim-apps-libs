@@ -1,7 +1,7 @@
 Name: kdepim-apps-libs
 # Parts of this used to be in kdepim
 Epoch:		3
-Version:	16.12.1
+Version:	16.12.2
 %define is_beta %(if test `echo %{version} |cut -d. -f3` -ge 70; then echo -n 1; else echo -n 0; fi)
 %if %{is_beta}
 %define ftpdir unstable
@@ -39,6 +39,7 @@ Libraries used by KDE PIM applications.
 %libpackage KF5KaddressbookGrantlee %{major}
 %libpackage KF5KdepimDBusInterfaces %{major}
 %libpackage KF5SendLater %{major}
+%libpackage KF5KaddressbookImportExport %{major}
 
 %define devname %{mklibname -d KF5PimAppsLibs}
 
@@ -66,6 +67,7 @@ Development files (Headers etc.) for %{name}.
 
 %files
 %{_sysconfdir}/xdg/kdepim-apps-lib.categories
+%{_sysconfdir}/xdg/kdepim-apps-lib.renamecategories
 
 %files -n %{devname}
 %{_includedir}/*
