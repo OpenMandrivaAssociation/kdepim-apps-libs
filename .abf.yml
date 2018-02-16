@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   kdepim-apps-libs-17.12.1.tar.xz: 42b867379e6b18995315504de12a453eb8800da3
+sources:
+  kdepim-apps-libs-17.12.2.tar.xz: 9eab255218d788130b8f42eb17bc5db57cb5d3a5
