@@ -29,6 +29,10 @@ BuildRequires: cmake(Qt5UiPlugin)
 BuildRequires: cmake(KF5Libkleo)
 BuildRequires: cmake(KF5CalendarCore)
 BuildRequires: cmake(KF5PimCommon)
+BuildRequires: cmake(KF5Prison)
+BuildRequires: cmake(QGpgme)
+BuildRequires: cmake(Gpgmepp)
+BuildRequires: cmake(Grantlee5)
 BuildRequires: boost-devel
 
 %description
