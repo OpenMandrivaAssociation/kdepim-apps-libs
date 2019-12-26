@@ -1,7 +1,7 @@
 Name: kdepim-apps-libs
 # Parts of this used to be in kdepim
 Epoch:		3
-Version:	19.11.90
+Version:	19.12.0
 %define is_beta %(if test `echo %{version} |cut -d. -f3` -ge 70; then echo -n 1; else echo -n 0; fi)
 %if %{is_beta}
 %define ftpdir unstable
@@ -9,7 +9,7 @@ Version:	19.11.90
 %define ftpdir stable
 %endif
 Release:	1
-Source0: http://download.kde.org/%{ftpdir}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0: http://download.kde.org/%{ftpdir}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 Summary: Libraries used by KDE PIM applications
 URL: http://kde.org/
 License: GPL
@@ -61,7 +61,7 @@ Development files (Headers etc.) for %{name}.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 %cmake_kde5
 
 %build
