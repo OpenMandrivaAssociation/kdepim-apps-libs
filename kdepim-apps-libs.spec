@@ -1,7 +1,7 @@
 Name: kdepim-apps-libs
 # Parts of this used to be in kdepim
 Epoch:		3
-Version:	20.04.3
+Version:	20.07.80
 %define is_beta %(if test `echo %{version} |cut -d. -f3` -ge 70; then echo -n 1; else echo -n 0; fi)
 %if %{is_beta}
 %define ftpdir unstable
@@ -34,15 +34,15 @@ BuildRequires: cmake(QGpgme)
 BuildRequires: cmake(Gpgmepp)
 BuildRequires: cmake(Grantlee5)
 BuildRequires: boost-devel
+Obsoletes: %{mklibname KF5FollowupReminder 5} < %{epoch}:20.07.0-1
+Obsoletes: %{mklibname KF5KdepimDBusInterfaces 5} < %{epoch}:20.07.0-1
+Obsoletes: %{mklibname KF5SendLater 5} < %{epoch}:20.07.0-1
 
 %description
 Libraries used by KDE PIM applications.
 
 %define major 5
-%libpackage KF5FollowupReminder %{major}
 %libpackage KF5KaddressbookGrantlee %{major}
-%libpackage KF5KdepimDBusInterfaces %{major}
-%libpackage KF5SendLater %{major}
 %libpackage KF5KaddressbookImportExport %{major}
 
 %define devname %{mklibname -d KF5PimAppsLibs}
@@ -50,7 +50,6 @@ Libraries used by KDE PIM applications.
 %package -n %{devname}
 Summary: Development files for %{name}
 Group: Development/C
-Requires: %{mklibname KF5FollowupReminder %{major}} = %{EVRD}
 Requires: %{mklibname KF5KaddressbookGrantlee %{major}} = %{EVRD}
 Requires: %{mklibname KF5KdepimDBusInterfaces %{major}} = %{EVRD}
 Requires: %{mklibname KF5SendLater %{major}} = %{EVRD}
@@ -73,7 +72,6 @@ Development files (Headers etc.) for %{name}.
 
 %files -f %{name}.lang
 %{_datadir}/qlogging-categories5/kdepim-apps-lib.categories
-%{_datadir}/qlogging-categories5/kdepim-apps-lib.renamecategories
 
 %files -n %{devname}
 %{_includedir}/*
