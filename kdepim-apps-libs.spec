@@ -51,8 +51,6 @@ Libraries used by KDE PIM applications.
 Summary: Development files for %{name}
 Group: Development/C
 Requires: %{mklibname KF5KaddressbookGrantlee %{major}} = %{EVRD}
-Requires: %{mklibname KF5KdepimDBusInterfaces %{major}} = %{EVRD}
-Requires: %{mklibname KF5SendLater %{major}} = %{EVRD}
 Requires: %{mklibname KF5KaddressbookImportExport %{major}} = %{EVRD}
 
 %description -n %{devname}
