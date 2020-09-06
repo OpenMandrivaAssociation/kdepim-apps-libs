@@ -1,7 +1,7 @@
 Name: kdepim-apps-libs
 # Parts of this used to be in kdepim
 Epoch:		3
-Version:	20.08.0
+Version:	20.08.1
 %define is_beta %(if test `echo %{version} |cut -d. -f3` -ge 70; then echo -n 1; else echo -n 0; fi)
 %if %{is_beta}
 %define ftpdir unstable
